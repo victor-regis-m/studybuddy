@@ -6,7 +6,7 @@ A web-app based on chat rooms where people can create their accounts to engage i
 
 <img width="838" alt="image" src="https://github.com/victor-regis-m/studybuddy/assets/80857814/e26c9550-7951-46a6-8fbe-f9f87bb0355e">
 
-Customize your profile and check out the comments and participations of other users on their profile 
+- Customize your profile and check out the comments and participations of other users on their profile 
 
 <img width="859" alt="image" src="https://github.com/victor-regis-m/studybuddy/assets/80857814/5f1cb9d4-f1db-4880-9152-e90c32bd92e8">
 
