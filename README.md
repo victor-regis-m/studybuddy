@@ -1,4 +1,4 @@
-# studybuddy
+# StudyBuddy
 A web-app based on chat rooms where people can create their accounts to engage in conversation about a variety of existing topics, or even add their own
 Simply create your account and log into our learning community where you can explore thousands of chats covering a wide variety of topics and engaged people who want to improve themselves!
 Find the topics you are interested in using the topic bars or the search bar and check out the hottest rooms using the activity feed
