@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends 'main.html' %}
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+{% block content %}
+<body>
+  <main class="profile-page layout layout--3">
+    <div class="container">
+      <!-- Topics Start -->
+      <div class="topics">
+        <ul class="topics__list">
+        {% include 'base/topics_component.html' %}
+        </ul>
+        <button class="btn btn--link" href="/">
+          More
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+            <title>chevron-down</title>
+            <path d="M16 21l-13-13h-3l16 16 16-16h-3l-13 13z"></path>
+          </svg>
+        </button>
+      </div>
+      <!-- Topics End -->
+
+      <!-- Room List Start -->
+      <div class="roomList">
+        <div class="profile">
+          <div class="profile__avatar">
+            <div class="avatar avatar--large active">
+              <img src="{{user.profile.picture.url}}" />
+            </div>
+          </div>
+          <div class="profile__info">
+            <h3>{{user.profile.name}}</h3>
+            <p>@{{user}}</p>
+            {% if user == request.user %}
+            <a href="{% url 'update-user' %}" class="btn btn--main btn--pill">Edit Profile</a>
+            {% endif %}
+          </div>
+          <div class="profile__about">
+            <h3>About</h3>
+            <p>
+              {{user.profile.bio}}
+            </p>
+          </div>
+        </div>
+
+        <div class="roomList__header">
+          <div>
+            <h2>Study Rooms Hosted by {{profile.name}}</a>
+            </h2>
+          </div>
+        </div>
+        {% include 'base/feed_component.html' %}
+      </div>
+      <!-- Room List End -->
+
+      <!-- Activities Start -->
+      <div class="activities">
+        {% include 'base/activity_component.html' %}
+      </div>
+      <!-- Activities End -->
+    </div>
+  </main>
+</body>
+
+</html>
+
+{% endblock %}

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+        <div class="topics__header">
+          <h2>Browse Topics</h2>
+        </div>
+        {% if pk %}
+        {% url 'user-profile' pk as u %}
+        {% else %}
+        {% url 'home' as u %}
+        {% endif %}
+
+        <li><a href="{{u}}" class="active">All <span>{{all_count}}</span></a></li>
+        {% for topic in topic_count %}
+        {% if topic.count > 0 %}
+        <li><a href="{{user_url}}?q={{topic.name}}" class="active">{{topic.name}} <span>{{topic.count}}</span></a></li>
+        {% endif %}
+        {% endfor %}
+</body>
+</html>

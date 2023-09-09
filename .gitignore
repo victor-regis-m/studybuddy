@@ -1,0 +1,5 @@
+*.sqlite3
+venv/
+studybud/base/migrations
+studybud/static/user_images/*
+!studybud/static/user_images/avatar.svg
